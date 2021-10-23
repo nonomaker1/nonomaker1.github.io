@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Nonogram</title>
+        <script type="text/javascript" src="bundle.js"></script>
+    </head>
+    <body>
+        <table class="main">
+            <tr>
+                <td class="container left top">
+                  <div><button id="nonogram">Nonogram</button></div>
+                  <div><button id="sudoku">Sudoku</button></div>
+                </td>
+                <td class="container top">
+                  <div class="top-item">
+                    <div>Credits:</div>
+                    <span id="creditsOwned">0</span>
+                  </div>
+                  <button id="maxSizePurchase" class="top-item" disabled>
+                    <div>Max Size</div>
+                    <div>+5</div>
+                    <div id="nextCost">$200</div>
+                  </button>
+                  <button id="tickSpeedPurchase" class="top-item" disabled>
+                    <div>Tick Speed</div>
+                    <div><span id="tickSpeed">1000</span> ms</div>
+                    <div>-5%</div>
+                    <div id="nextTickCost">$100</div>
+                  </button>
+                  <button id="creditsPerSquarePurchase" class="top-item" disabled>
+                    <div>Credits/Square</div>
+                    <div><span id="cps">1</span></div>
+                    <div>+1</div>
+                    <div id="creditsPerSquareCost">$500</div>
+                  </button>
+                  <button id="puzzleBonusPurchase" class="top-item" disabled>
+                    <div>Puzzle Multiplier</div>
+                    <div id="bonus">1</div>
+                    <div>x2</div>
+                    <div id="puzzleBonusCost">$1000</div>
+                  </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="container left">
+                    <button id="statistics">Statistics</button>
+                    <div>Puzzles Completed: <span id="puzzlesCompleted">0</span></div>
+                    <div>Next Puzzle Shape:</div>
+                    <input type="range" min="5" max="5" value="5" step="5" class="sizeSelector" id="sizeSelector">
+                    <div ><span id="sizeLabel"></span>/<span id="maxSizeLabel"></span></div>
+                    <div><button disabled id="skipCompletedLines">$100 Skip Completed Lines</button></div>
+                    <div><button disabled id="skipUnchangedLines">$1000 Skip Unchanged Lines</button></div>
+                </td>
+                <td class="container main">
+                    <div class="puzzleName" id="puzzleName"></div>
+                    <table class="puzzle" id="puzzle"></table>
+                    <div class="progressBar" id="progressBar"><div class="progress" id="progress"></div></div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
